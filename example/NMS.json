@@ -1,0 +1,8 @@
+[
+  {
+    "name": "Remove the \"Mod Enabled\" Warning screen on startup",
+    "pattern": "48 8B 01 48 85 C0 74 08 0F B6 80 5A 46 00 00 C3",
+    "offset": "0x06",
+    "value": "EB"
+  }
+]

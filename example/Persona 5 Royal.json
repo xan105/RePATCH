@@ -1,0 +1,8 @@
+[
+  {
+    "name": "Skip Intro",
+    "pattern": "74 10 C7 ?? 0C 00 00 00",
+    "offset": "0x00",
+    "value": "90 90"
+  }
+]
