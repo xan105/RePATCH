@@ -58,6 +58,8 @@ jobs:
 
           Copy-Item ".\build\Win32\Release\RePATCH.dll" "$tmp\RePATCH.dll" -Force
           Copy-Item ".\build\x64\Release\RePATCH.dll" "$tmp\RePATCH64.dll" -Force
+          New-Item -ItemType Directory -Path "$tmp\example" | Out-Null
+          Copy-Item ".\example\*" "$tmp\example\" -Recurse -Force
           Copy-Item ".\README.md" $tmp -Force
           Copy-Item ".\LICENSE" $tmp -Force
 
