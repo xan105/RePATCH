@@ -78,7 +78,7 @@ Alternatively, here are some of my own:
       "REPATCH_FILEPATH": "%CURRENTDIR%\\Addons\\patch.json"
     },
     "addons": [
-      { "path": "Addons/RePATCH.dll", "required": true }
+      { "path": "Addons/RePATCH64.dll", "required": true }
     ]
   }
   ```
@@ -97,7 +97,7 @@ Alternatively, here are some of my own:
   import { createRemoteThread } from "@xan105/remote-thread";
 
   const EXECUTABLE = "G:\\P5R\\P5R.exe";
-  const ADDON = "G:\\P5R\\RePATCH.dll";
+  const ADDON = "G:\\P5R\\RePATCH64.dll";
   const ARGS = [];
 
   const binary = spawn(EXECUTABLE, ARGS, {
