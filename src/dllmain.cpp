@@ -65,21 +65,21 @@ DWORD WINAPI Main(LPVOID lpReserved) {
         std::vector<Patch> patches = json.get<std::vector<Patch>>();
         for (const auto& patch : patches) {
             if (!patch.enable) continue;
-                console.log("Patch: \"{}\"", patch.name);
+            console.log("Patch: \"{}\"", patch.name);
 
-                auto addresses = memory::find(patch.module, patch.pattern, patch.match);
-                if (addresses.empty()) {
-                    console.error("No pattern found!");
-                }
+            auto addresses = memory::find(patch.module, patch.pattern, patch.match);
+            if (addresses.empty()) {
+                console.error("No pattern found!");
+            }
 
-                for (const auto& address : addresses) {
-                    console.log("Found pattern at 0x{:X}", address);
-                    if (memory::write(address, patch.offset, patch.value)) {
-                        console.log("Applying patch... Succes!");
-                    } else {
-                        console.error("Applying patch... Failed!");
-                    }
+            for (const auto& address : addresses) {
+                console.log("Found pattern at 0x{:X}", address);
+                if (memory::write(address, patch.offset, patch.value)) {
+                    console.log("Applying patch... Succes!");
+                } else {
+                    console.error("Applying patch... Failed!");
                 }
+            }
         }
     } catch (const std::exception& error) {
         console.error("{}", error.what());
