@@ -39,9 +39,9 @@ By default the config file is `patch.json` but you can specify the config file p
 Each _"patch object"_ has the following properties:
 
 - `name?: string`: Describe the patch.
-- `enable?: bool` _(true)_: Enable or disable the patch.
+- `enable?: bool`: Enable (default) or disable the patch.
 - `pattern: string`: Hexadecimal string pattern to search for in memory. Use `?` for wildcard, whitespace are ignored. 
-- `offset?: number | string` _(0)_: Address offset.
+- `offset?: number | string`: Address offset (default to 0).
   
   Because hex numbers are not valid in JSON. Offset can either be a number or a string:
   
@@ -49,8 +49,8 @@ Each _"patch object"_ has the following properties:
   + If `string` then offset is expected to be a **hex number represented as a string** and must start with `0x`
                                          
 - `value: string`: hexadecimal string representing the sequence of bytes to be written. Whitespace are ignored.
-- `match?: "first" | "last" | "all"` _(first)_: Return the first match (default), all matches, or the last match.
-- `module?: string`: When specified, scan module memory region instead of process
+- `match?: "first" | "last" | "all"`: Return the first match (default), all matches, or the last match.
+- `module?: string`: When specified, scan module memory region instead of process.
 
 > [!CAUTION]
 > Incorrect patterns or values may cause crashes.
