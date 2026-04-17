@@ -29,12 +29,12 @@ _Example:_
     "offset": "0x00",
     "value": "90 90",
     "match": "first",
-    "module": "auto"
+    "module": "UnityPlayer.dll"
   }
 ]
 ```
 
-By default the config file is `patch.json` but you can specify the filepath with the env. var `REPATCH_FILEPATH`
+By default the config file is `patch.json` but you can specify the config file path with the env. var `REPATCH_FILEPATH`
 
 Each _"patch object"_ has the following properties:
 
