@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://github.com/xan105/RePATCH/raw/main/logo.png">
-  <em>Patching process memory at runtime with just a config file!</em>
+  <br /><em>Patching process memory at runtime with just a config file!</em>
 </p>
 
 This project is an in-memory binary patcher. Instead of altering file(s) on disk, it modifies the memory of a running process.
@@ -27,7 +27,7 @@ _Example:_
     "enable": true,
     "pattern": "74 10 C7 ?? 0C 00 00 00",
     "offset": "0x00",
-    "value": "90 90,
+    "value": "90 90",
     "match": "first",
     "module": "auto"
   }
@@ -60,7 +60,7 @@ Usage
 
 Set up the config file with a list of patch(es) to apply then inject RePatch into the target process.
 
-You will need a DLL injector. A quick google search will find you plenty on GitHub.
+You will need a DLL injector. A quick google search will find you plenty on GitHub.<br />
 🐧 On Linux the classic combo `createRemoteThread()` + `LoadLibrary()` from _Kernel32_ works under Wine/Proton.
 
 Alternatively, here are some of my own:
