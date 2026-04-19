@@ -125,7 +125,7 @@ Build
 
 🆚 Visual Studio 2022
 
-Solution: `./vc/repatch.sln`
+Solution: `./vc/repatch.sln` <br />
 Output: `./build/output/${platform}/${config}`
 
 Github Actions
